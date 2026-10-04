@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "会话重命名",
+    "description": "新增 session_rename 工具，让 AI 可以给自己的会话改名。"
+  }
+}

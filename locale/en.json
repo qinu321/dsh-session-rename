@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session Rename",
+    "description": "Adds a session_rename tool so an Agent can title its own Session."
+  }
+}
