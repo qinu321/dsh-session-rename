@@ -9,6 +9,15 @@
     "url": "git+https://github.com/qinu321/dsh-session-rename.git"
   },
   "homepage": "https://github.com/qinu321/dsh-session-rename#readme",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
   "type": "module",
   "main": "./index.js",
   "exports": {
