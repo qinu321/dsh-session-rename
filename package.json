@@ -1,7 +1,7 @@
 {
   "name": "dsh-session-rename",
   "version": "1.0.0",
-  "description": "Adds a session_rename tool so an Agent can title its own Session. | 让 AI 重命名自己会话的插件。",
+  "description": "Lets an AI rename its own session in DeepSeek Harness — a zero-dependency plugin that adds the session_rename tool.",
   "author": "qinu321 (https://github.com/qinu321)",
   "license": "MIT",
   "repository": {
