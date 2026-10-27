@@ -1,8 +1,14 @@
 {
   "name": "dsh-session-rename",
   "version": "1.0.0",
-  "private": true,
   "description": "Adds a session_rename tool so an Agent can title its own Session. | 让 AI 重命名自己会话的插件。",
+  "author": "qinu321 (https://github.com/qinu321)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qinu321/dsh-session-rename.git"
+  },
+  "homepage": "https://github.com/qinu321/dsh-session-rename#readme",
   "type": "module",
   "main": "./index.js",
   "exports": {
@@ -15,7 +21,8 @@
     "cordis.patch.yml",
     "icon.svg",
     "locale/*.json",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "icon": "./icon.svg",
   "dsh": {
