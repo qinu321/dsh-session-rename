@@ -38,11 +38,17 @@ DSH 本身具备重命名会话的能力，但**没有暴露成 AI 可调用的�
 
 ## 安装
 
-由 DSH 的插件管理流程安装，不要手写 profile 的 `package.json` / `cordis.patch.yml`：
+已发布到 npm，包名 `dsh-session-rename`。装进某个 profile：
 
 ```
-plugin_manager { action: "install_bundle", target: "<本目录绝对路径>" }
+dsh plugin --profile web add dsh-session-rename
 ```
+
+命令把参数转发给 profile 目录里的 pnpm；成功后会顺带把新出现的 bundle 登记进 `dsh.profile.bundles`（插件包只要声明了 `dsh.bundle` 就会自动启用），重启 `dsh web` 生效。
+
+同样的效果也可以走插件面板或 `plugin_manager { action: "install_bundle", target: "dsh-session-rename" }`。
+
+**从本地目录开发**：把上面的 `target` 换成该目录的绝对路径，会装成 `link:` 依赖。
 
 插件是纯 Host 插件，**零依赖、零构建**：`index.js` 不 import 任何包，直接注册符合 `ToolDefinition` 契约的普通对象，因此不存在依赖解析失败的风险。
 
@@ -55,6 +61,8 @@ plugin_manager { action: "install_bundle", target: "<本目录绝对路径>" }
 ```
 plugin_manager { action: "remove_bundle", target: "dsh-session-rename" }
 ```
+
+命令行装的：`dsh plugin --profile web remove dsh-session-rename`（移除后 `dsh.profile.bundles` 里的条目会一起被清理）。
 
 移除后工具即消失，会话标题不受影响（已写入的 `session/title` 事件仍在日志里）。
 
