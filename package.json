@@ -1,6 +1,6 @@
 {
   "name": "dsh-session-rename",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lets an AI rename its own session in DeepSeek Harness — a zero-dependency plugin that adds the session_rename tool.",
   "author": "qinu321 (https://github.com/qinu321)",
   "license": "MIT",
@@ -31,8 +31,12 @@
     "icon.svg",
     "locale/*.json",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.1"
+  },
   "icon": "./icon.svg",
   "dsh": {
     "bundle": {
